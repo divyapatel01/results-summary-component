@@ -1,0 +1,326 @@
+:root {
+  --color-primary-light-red: hsl(0, 100%, 67%);
+  --color-primary-light-red-opacity: hsla(0, 100%, 67%, 10%);
+  --color-primary-orangey-yellow: hsl(39, 100%, 56%);
+  --color-primary-orangey-yellow-opacity: hsla(39, 100%, 56%, 10%);
+  --color-primary-green-teal: hsl(166, 100%, 37%);
+  --color-primary-green-teal-opacity: hsla(166, 100%, 37%, 10%);
+  --color-primary-cobalt-blue: hsl(234, 85%, 45%);
+  --color-primary-cobalt-blue-opacity: hsla(234, 85%, 45%, 10%);
+
+  --color-gradients-light-slate-blue: hsl(252, 100%, 67%);
+  --color-gradients-light-royal-blue: hsl(241, 81%, 54%);
+  --color-gradients-violet-blue: hsla(256, 72%, 46%, 1);
+  --color-gradients-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-pale-blue: hsl(221, 100%, 96%);
+  --color-neutral-light-lavender: hsl(241, 100%, 89%);
+  --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+  --typography-body-font-size: 18px;
+  --typography-body-font-family: "Hanken Grotesk";
+
+  --card-width: 786px;
+  --card-radius: 36px;
+}
+
+/* hanken-grotesk-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/static/HankenGrotesk-Medium.ttf");
+}
+
+/* hanken-grotesk-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/static/HankenGrotesk-Bold.ttf");
+}
+
+/* hanken-grotesk-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+
+/* START: Common */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--typography-body-font-size);
+  font-family: var(--typography-body-font-family);
+  background-color: var(--color-neutral-white);
+  line-height: 1.5;
+}
+
+h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+h3 {
+  margin: 0 0 27px;
+  font-size: 26px;
+}
+
+a {
+  color: var(--color-primary-cobalt-blue);
+}
+
+button {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  color: var(--color-neutral-white);
+  background-color: var(--color-neutral-dark-gray-blue);
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--color-gradients-light-royal-blue);
+}
+
+main {
+  margin: 140px 0;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  padding: 16px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    margin: 0 0 74px;
+  }
+}
+
+/* END: Common */
+
+/* START: swatches */
+
+.swatches {
+  position: fixed;
+  display: none;
+}
+
+.swatch {
+  width: 40px;
+  height: 40px;
+}
+
+.swatch.swatch-1 {
+  background-color: var(--color-primary-light-red);
+}
+
+.swatch.swatch-2 {
+  background-color: var(--color-primary-orangey-yellow);
+}
+
+.swatch.swatch-3 {
+  background-color: var(--color-primary-green-teal);
+}
+
+.swatch.swatch-4 {
+  background-color: var(--color-primary-cobalt-blue);
+}
+
+.swatch.swatch-5 {
+  background-color: var(--color-gradients-light-slate-blue);
+}
+
+.swatch.swatch-6 {
+  background-color: var(--color-gradients-light-royal-blue);
+}
+
+.swatch.swatch-7 {
+  background-color: var(--color-gradients-violet-blue);
+}
+
+.swatch.swatch-8 {
+  background-color: var(--color-gradients-persian-blue);
+}
+
+.swatch.swatch-9 {
+  background-color: var(--color-neutral-white);
+}
+
+.swatch.swatch-10 {
+  background-color: var(--color-neutral-pale-blue);
+}
+
+.swatch.swatch-11 {
+  background-color: var(--color-neutral-light-lavender);
+}
+
+.swatch.swatch-12 {
+  background-color: var(--color-neutral-dark-gray-blue);
+}
+
+/* END: swatches */
+
+/* START: Order card */
+
+.order-card {
+  width: var(--card-width);
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: var(--card-radius);
+  display: flex;
+  box-shadow: 0 0 30px 0 hsl(0deg 0% 0% / 10%);
+  background-color: var(--color-neutral-white);
+}
+
+/* START: Order card result */
+
+.order-result {
+  flex: 1;
+  padding: 40px 0;
+  background-image: linear-gradient(
+    var(--color-gradients-light-slate-blue),
+    var(--color-gradients-light-royal-blue)
+  );
+  color: var(--color-neutral-pale-blue);
+  border-radius: var(--card-radius);
+  text-align: center;
+}
+
+.order-result-title {
+  margin: 0;
+}
+
+.order-result-wrapper {
+  background-image: linear-gradient(
+    var(--color-primary-cobalt-blue),
+    var(--color-gradients-light-royal-blue)
+  );
+  border-radius: 50%;
+  margin: 34px auto 24px;
+  height: 216px;
+  width: 216px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.order-result-wrapper .score {
+  font-size: 80px;
+  line-height: 1;
+}
+
+.order-result-caption {
+  width: 266px;
+  margin: 0 auto;
+}
+
+.capion-content {
+  margin: 8px 0;
+}
+
+/* END: Order card result */
+
+/* END: Order card summary */
+
+.order-summary {
+  flex: 1;
+}
+
+.order-summary-wrapper {
+  padding: 35px 42px;
+}
+
+.order-summary-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 44px;
+}
+
+.order-summary-list-item {
+  padding: 15px 18px;
+  font-size: 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-summary-list-item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.order-summary-list-item:nth-child(1) {
+  background-color: var(--color-primary-light-red-opacity);
+  color: var(--color-primary-light-red);
+}
+
+.order-summary-list-item:nth-child(2) {
+  background-color: var(--color-primary-orangey-yellow-opacity);
+  color: var(--color-primary-orangey-yellow);
+}
+
+.order-summary-list-item:nth-child(3) {
+  background-color: var(--color-primary-green-teal-opacity);
+  color: var(--color-primary-green-teal);
+}
+
+.order-summary-list-item:nth-child(4) {
+  background-color: var(--color-primary-cobalt-blue-opacity);
+  color: var(--color-primary-cobalt-blue);
+}
+
+.list-item-icon {
+  margin-right: 8px;
+}
+
+.list-item-icon img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list-item-score {
+  color: hsl(0, 0%, 0%, 30%);
+}
+
+.list-item-score span {
+  color: hsl(0, 0%, 0%);
+}
+
+/* END: Order card summary */
+
+/* END: Order card */
+
+@media screen and (max-width: 767px) {
+  .order-card {
+    flex-direction: column;
+  }
+
+  .order-result {
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+  }
+
+  .order-summary-wrapper {
+    padding: 30px;
+  }
+}
